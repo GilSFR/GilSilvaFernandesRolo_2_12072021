@@ -1,0 +1,195 @@
+/* =============================================================================
+| Define the size of the body
+============================================================================= */
+body{
+    width: 95vw;
+    height: 95vh;
+    margin: auto;
+
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+/* =============================================================================
+| First Grid that englobes Header and article
+============================================================================= */
+#body_page{
+    width: 95vw;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: 
+        "header"
+        "article";
+}
+
+/* =========================================================================
+| ici tout est sous le selecteur #body_page
+========================================================================= */
+
+    /* =========================================================================
+    | Selecteur HEADER and sub selectors
+    ========================================================================= */
+
+    header{
+        grid-area: header;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+        grid-template-areas: 
+            "nav"
+            "search"
+            "filters";
+    }
+
+        /* nav and sub-selectors styles and display below ======================================*/
+        nav{
+            grid-area: nav;
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: 
+                "logo . linkHebergement linkActivite linkInscrire";
+        }
+            #logo{
+                grid-area: logo;
+            }
+            #linkHebergement{
+                grid-area: linkHebergement;
+            }
+            #linkActivite {
+                grid-area: linkActivite;
+            }
+            #linkInscrire{
+                grid-area: linkInscrire;
+            }
+            
+        /* search bar and sub-selectors styles and display below ======================================*/
+        #search{
+            grid-area: search;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* filters and sub-selectors styles and display below ======================================*/
+        #filters{
+            grid-area: filters;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: 2fr 1fr;
+            grid-template-areas: 
+                "textFilters linkEconomique linkFamilial linkRomantique linkAnimaux"
+                "informationVille informationVille informationVille informationVille informationVille";
+        }
+            #textFilters{
+                grid-area: textFilters;
+            }
+            #linkEconomique{
+                grid-area: linkEconomique;
+            }
+            #linkFamilial{
+                grid-area: linkFamilial;
+            }
+            #linkRomantique{
+                grid-area: linkRomantique;
+            }
+            #linkAnimaux{
+                grid-area: linkAnimaux;
+            }
+            #informationVille{
+                grid-area: informationVille;
+            }
+
+
+
+    /* =========================================================================
+    | Selecteur article and sub selectors
+    ========================================================================= */
+    #article{
+    grid-area: article;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 4fr 3fr;
+    grid-template-areas: 
+        "article1 article2"
+        "article3 article3";
+    }
+        #article1{
+            grid-area: article1;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 1fr 4fr 4fr;
+            grid-template-areas: 
+                "articleTitre articleTitre articleTitre"
+                "article1section1 article1section2 article1section3 "
+                "article1section4 article1section5 article1section6";
+        }
+            #article1section1{
+                grid-area: article1section1;
+            }
+            #article1section2{
+                grid-area: article1section2;
+            }
+            #article1section3{
+                grid-area: article1section3;
+            }
+            #article1section4{
+                grid-area: article1section4;
+            }
+            #article1section5{
+                grid-area: article1section5;
+            }
+            #article1section6{
+                grid-area: article1section6;
+            }
+
+        #article2{
+            grid-area: article2;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #article3{
+            grid-area: article3;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(6, 1fr);
+            grid-template-areas: 
+                "article3Titre article3Titre article3Titre article3Titre"
+                "article3section1 article3section2 article3section4 article3section5"
+                "article3section1 article3section2 article3section4 article3section5"
+                "article3section1 article3section2 article3section4 article3section6"
+                "article3section1 article3section3 article3section4 article3section6"
+                "article3section1 article3section3 article3section4 article3section6";
+        }
+            #article3section1{
+                grid-area: article3section1;
+            }
+            #article3section2{
+                grid-area: article3section2;
+            }
+            #article3section3{
+                grid-area: article3section3;
+            }
+            #article3section4{
+                grid-area: article3section4;
+            }
+            #article3section5{
+                grid-area: article3section5;
+            }
+            #article3section6{
+                grid-area: article3section6;
+            }
+
+/* =============================================================================
+| FOOTER HERE
+============================================================================= */
+
+footer{
+    display: flex;
+    flex-direction: row;
+}
