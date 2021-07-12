@@ -1,30 +1,27 @@
+@font-face {
+    font-family: "Raleway";
+    src: url(./fonts/Raleway-VariableFont_wght.ttf);
+}
+
+
+
 /* =============================================================================
 | Define the size of the body
 ============================================================================= */
 body{
-    width: 95vw;
-    height: 95vh;
-    margin: auto;
-
-}
-
-*{
-    margin: 0%;
-    padding: 0%;
+    font-family: "Raleway", "calibri";
+    width: 100vw;
+    height: 1000px;
 }
 
 /* =============================================================================
 | First Grid that englobes Header and article
 ============================================================================= */
 #body_page{
-    width: 95vw;
-    height: 70vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr;
-    grid-template-areas: 
-        "header"
-        "article";
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
 }
 
 /* =========================================================================
@@ -36,10 +33,9 @@ body{
     ========================================================================= */
 
     header{
-        grid-area: header;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 2fr 1fr;
+        grid-template-rows: 0.8fr 1fr 1fr;
         grid-template-areas: 
             "nav"
             "search"
@@ -48,7 +44,10 @@ body{
 
         /* nav and sub-selectors styles and display below ======================================*/
         nav{
+            height: 100%;
             grid-area: nav;
+            align-items: center;
+            justify-content: center;
             display: grid;
             grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
             grid-template-rows: 1fr;
@@ -60,6 +59,8 @@ body{
             }
             #linkHebergement{
                 grid-area: linkHebergement;
+                height: 100%;
+                border-top: 1px solid #0065FC;
             }
             #linkActivite {
                 grid-area: linkActivite;
@@ -69,40 +70,104 @@ body{
             }
             
         /* search bar and sub-selectors styles and display below ======================================*/
+        
+
         #search{
+            height: 100%;
             grid-area: search;
             display: flex;
             flex-direction: column;
         }
+            #searchBar{
+                width: 100%;
+            }
+                #iconSearchBar{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 15px 0 0 15px;
+                }
+                #inputSearchBar{
+                    height: 48px;
+                    width: 15%; 
+                    padding-left: 1%;
+                    border : 1px solid #F2F2F2
+                }
+                    #inputSearchBar input{
+                            height: 48px;
+                            width: 100%;
+                            font-size: 16px;
+                        }
+                #linkSearchBar{
+                    height: 50px;
+                    width: 10%;
+                    padding-left: 1%;
+                    border-radius: 0 15px 15px 0;
+                    
+                }
 
         /* filters and sub-selectors styles and display below ======================================*/
         #filters{
+            margin-top: 2%;
+            height: 50px;
             grid-area: filters;
             display: grid;
-            grid-template-columns: repeat(5,1fr);
+            gap: 2%;
+            justify-content: flex-start;
+            grid-template-columns: 5% 13% 10% 13% 18% ;
             grid-template-rows: 2fr 1fr;
             grid-template-areas: 
                 "textFilters linkEconomique linkFamilial linkRomantique linkAnimaux"
                 "informationVille informationVille informationVille informationVille informationVille";
         }
+            .iconFilter{
+                height: 100%;
+                width: 50px;
+                border-radius:25px;
+            } 
+            
+            .textBoxFilter{
+                padding-left: 5%;
+            }
+
             #textFilters{
                 grid-area: textFilters;
             }
             #linkEconomique{
+                width: 100%;
                 grid-area: linkEconomique;
             }
             #linkFamilial{
+                width: 100%;
                 grid-area: linkFamilial;
             }
             #linkRomantique{
+                width: 100%;
                 grid-area: linkRomantique;
             }
             #linkAnimaux{
+                width: 100%;
                 grid-area: linkAnimaux;
             }
+
+            .linkFilterBoxStyle{
+                padding :0%;
+                width: 60%;
+                border-radius: 30px 25px 25px 30px;
+                border: 2px solid #f2f2f2;
+            }
+
             #informationVille{
+                margin-top: 2%;
                 grid-area: informationVille;
             }
+                .iconFilterSmall{
+                    width: 20px;
+                    height: 100%;
+                    border-radius:25px;
+                    border: 2px solid #F2F2F2;
+                    color: #0065FC;
+                    margin-right: 1%;
+                } 
 
 
 
@@ -110,24 +175,52 @@ body{
     | Selecteur article and sub selectors
     ========================================================================= */
     #article{
+    width: 100%;
+    margin-top: 2%;
+    gap: 1%;
     grid-area: article;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 4fr 3fr;
+    grid-template-rows: 70% 50%;
     grid-template-areas: 
         "article1 article2"
         "article3 article3";
     }
         #article1{
+            padding: 3%;
+            gap: 1%;
             grid-area: article1;
             display: grid;
-            grid-template-columns: repeat(3,1fr);
-            grid-template-rows: 1fr 4fr 4fr;
+            grid-template-columns: repeat(3,2fr);
+            grid-template-rows: 10% 40% 40% 10%;
             grid-template-areas: 
                 "articleTitre articleTitre articleTitre"
-                "article1section1 article1section2 article1section3 "
-                "article1section4 article1section5 article1section6";
+                "article1section1 article1section2 article1section3"
+                "article1section4 article1section5 article1section6"
+                "article1ShohwMore article1ShohwMore article1ShohwMore";
         }
+            
+            .article1Image{
+                padding: 3%;
+                height: 50%;
+                
+            }
+                .article1Image img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 15px 15px 0 0;
+                }
+            #articleTitre {
+                grid-area: articleTitre;
+            }
+            section i{
+                color: #0065FC;
+            }
+            .titreSection{
+                font-size: medium;
+                font-weight: bold;
+            }
+
             #article1section1{
                 grid-area: article1section1;
             }
@@ -145,6 +238,9 @@ body{
             }
             #article1section6{
                 grid-area: article1section6;
+            }
+            #article1ShohwMore{
+                grid-area: article1ShohwMore;
             }
 
         #article2{
@@ -192,4 +288,108 @@ body{
 footer{
     display: flex;
     flex-direction: row;
+}
+
+
+
+/* =============================================================================
+| Colors
+============================================================================= */
+.blue{
+    color:  #0065FC;
+}
+.white{
+    color: white;
+}
+.grey{
+    color: #F2F2F2;
+}
+
+
+
+/* =============================================================================
+| backGround Colors
+============================================================================= */
+.backgroundGrey{
+    background-color: #F2F2F2;
+}
+.backgroundBlue{
+    background-color: #0065FC;
+}
+.backgroundLightBlue{
+    background-color: #DEEBFF;
+}
+.backgroundWhite{
+    background-color: white;
+}
+
+/* =============================================================================
+| Font styles & sizes
+============================================================================= */
+
+.bold{
+    font-weight: bold;
+}
+
+.fontSizeMedium{
+    font-size: medium;
+}
+.fontSizeLarge{
+    font-size: large;
+}
+.fontSizeXLarge{
+    font-size:x-large;
+}
+
+
+/* =============================================================================
+| borders
+============================================================================= */
+
+
+
+
+
+/* =============================================================================
+| styles for all
+============================================================================= */
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.noMargin{
+    margin: 0%;
+}
+.marginRight{
+    margin-right: 3%;
+}
+.paddingLeft{
+    padding-left: 5%;
+}
+
+.borderNone{
+    border: none;
+}
+.borderRadius{
+    border-radius: 15px;
+}
+.noBigDisplay{
+    display: none;
+}
+
+
+
+/* flex ======================================================================*/
+
+.flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flexLeft{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
