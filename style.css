@@ -511,3 +511,16 @@ a{
     justify-content: flex-start;
 }
 
+/* CSS effects ===============================================================*/
+
+.cssEffect{
+    background-color: white;
+    transition-property: background-color,color;
+    transition-duration: 1s;
+    transition-delay: 0.4s;
+}
+
+.cssEffect:hover{
+    background-color:#0065FC;
+    color: white;
+}
