@@ -2,9 +2,6 @@
     font-family: "Raleway";
     src: url(./fonts/Raleway-VariableFont_wght.ttf);
 }
-
-
-
 /* =============================================================================
 | Define the size of the body
 ============================================================================= */
@@ -13,7 +10,6 @@ body{
     width: 100vw;
     height: 1000px;
 }
-
 /* =============================================================================
 | First Grid that englobes Header and article
 ============================================================================= */
@@ -23,13 +19,15 @@ body{
     display: flex;
     flex-direction: column;
 }
-
 /* =========================================================================
-| ici tout est sous le selecteur #body_page
+| Here everithing under body_page
 ========================================================================= */
 
     /* =========================================================================
-    | Selecteur HEADER and sub selectors
+    | HEADER 
+    |   NAV
+    |   Searchbar
+    |   Filters
     ========================================================================= */
 
     header{
@@ -41,8 +39,9 @@ body{
             "search"
             "filters";
     }
-
-        /* nav and sub-selectors styles and display below ======================================*/
+        /* =====================================================================
+        | NAV
+        ===================================================================== */
         nav{
             height: 100%;
             grid-area: nav;
@@ -69,9 +68,9 @@ body{
                 grid-area: linkInscrire;
             }
             
-        /* search bar and sub-selectors styles and display below ======================================*/
-        
-
+        /* =====================================================================
+        | Search Bar
+        ===================================================================== */
         #search{
             height: 100%;
             grid-area: search;
@@ -104,8 +103,9 @@ body{
                     border-radius: 0 15px 15px 0;
                     
                 }
-
-        /* filters and sub-selectors styles and display below ======================================*/
+        /* =====================================================================
+        | Filters
+        ===================================================================== */
         #filters{
             margin-top: 2%;
             height: 50px;
@@ -168,38 +168,41 @@ body{
                     color: #0065FC;
                     margin-right: 1%;
                 } 
-
-
-
     /* =========================================================================
-    | Selecteur article and sub selectors
+    |#Article > 
+    |      #article1   > 6 sections
+    |      #article2   > 3 sections
+    |      #article3   > 6 sections
     ========================================================================= */
-    #article{
+   
+    article{
     width: 100%;
     margin-top: 2%;
     gap: 1%;
     grid-area: article;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 70% 50%;
+    grid-template-rows: 85% 50%;
     grid-template-areas: 
         "article1 article2"
         "article3 article3";
     }
+        /* =====================================================================
+        | #article1
+        ===================================================================== */
         #article1{
-            padding: 3%;
-            gap: 1%;
+            padding: 20px;
+            gap: 20px;
             grid-area: article1;
             display: grid;
             grid-template-columns: repeat(3,2fr);
-            grid-template-rows: 10% 40% 40% 10%;
+            grid-template-rows: 10% 35% 35% 8%;
             grid-template-areas: 
                 "articleTitre articleTitre articleTitre"
                 "article1section1 article1section2 article1section3"
                 "article1section4 article1section5 article1section6"
                 "article1ShohwMore article1ShohwMore article1ShohwMore";
         }
-            
             .article1Image{
                 padding: 3%;
                 height: 50%;
@@ -210,17 +213,9 @@ body{
                     height: 100%;
                     border-radius: 15px 15px 0 0;
                 }
-            #articleTitre {
+            #article1Titre {
                 grid-area: articleTitre;
             }
-            section i{
-                color: #0065FC;
-            }
-            .titreSection{
-                font-size: medium;
-                font-weight: bold;
-            }
-
             #article1section1{
                 grid-area: article1section1;
             }
@@ -242,13 +237,84 @@ body{
             #article1ShohwMore{
                 grid-area: article1ShohwMore;
             }
-
+        /* =====================================================================
+        | #artticle2
+        ===================================================================== */
         #article2{
+            align-items: center;
+            padding: 20px;
+            gap: 20px;
             grid-area: article2;
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows:10% 25% 25% 25%;
+            grid-template-areas: 
+                "article2Titre"
+                "article2section1"
+                "article2section2"
+                "article2section3";
+        }
+        #article2Titre{
+            grid-area: article2Titre;
+
+        }
+        #article2section1{
+            grid-area: article2section1;
+            
+        }
+            #article2Section1Image{
+                background-image: url(./images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg);
+            }
+        #article2section2{
+            grid-area: article2section2;
+        }
+            #article2Section2Image{
+                background-image: url(./images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg);
+            }
+
+        #article2section3{
+            grid-area: article2section3;
+        }
+            #article2Section3Image{
+                background-image: url(./images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg);
+            }
+
+        .article2Image{
+            height: 100%;
+            width: 150px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
+        .article2Image img{
+            height: 100%;
+            width: 100%;
+        }
+        .article2text{
+            padding: 10px;
+            height: 190px;
+            width: 170px;
+        }
+        .article2Stars{
+            padding-top: 20%;
+        }
+
+        #article2 section{
+            align-items: flex-start;
+            padding: 10px;
+            height: 80%;
+            display: flex;
+            flex-direction: row;
+            background-color: white;
+            border-radius: 15px;
+        }
+
+
+        
+        /* =====================================================================
+        | #article3
+        ===================================================================== */
         #article3{
             grid-area: article3;
             display: grid;
@@ -281,6 +347,18 @@ body{
                 grid-area: article3section6;
             }
 
+        /* =================================================================
+        | All articles relates
+        ================================================================= */
+        
+        section i{
+            color: #0065FC;
+        }
+        .titreSection{
+            font-size: medium;
+            font-weight: bold;
+        }
+
 /* =============================================================================
 | FOOTER HERE
 ============================================================================= */
@@ -289,9 +367,6 @@ footer{
     display: flex;
     flex-direction: row;
 }
-
-
-
 /* =============================================================================
 | Colors
 ============================================================================= */
@@ -304,9 +379,6 @@ footer{
 .grey{
     color: #F2F2F2;
 }
-
-
-
 /* =============================================================================
 | backGround Colors
 ============================================================================= */
@@ -322,15 +394,12 @@ footer{
 .backgroundWhite{
     background-color: white;
 }
-
 /* =============================================================================
 | Font styles & sizes
 ============================================================================= */
-
 .bold{
     font-weight: bold;
 }
-
 .fontSizeMedium{
     font-size: medium;
 }
@@ -340,27 +409,30 @@ footer{
 .fontSizeXLarge{
     font-size:x-large;
 }
-
-
 /* =============================================================================
 | borders
 ============================================================================= */
-
-
-
-
-
+.borderNone{
+    border: none;
+}
+.borderRadius{
+    border-radius: 15px;
+}
+.borderRadiusLeft{
+    border-radius: 15px 0 0 15px;
+}
 /* =============================================================================
 | styles for all
 ============================================================================= */
-
 a{
     text-decoration: none;
     color: black;
 }
-
 .noMargin{
     margin: 0%;
+}
+.noMarginTop{
+    margin-top: 0%;
 }
 .marginRight{
     margin-right: 3%;
@@ -368,19 +440,9 @@ a{
 .paddingLeft{
     padding-left: 5%;
 }
-
-.borderNone{
-    border: none;
-}
-.borderRadius{
-    border-radius: 15px;
-}
 .noBigDisplay{
     display: none;
 }
-
-
-
 /* flex ======================================================================*/
 
 .flexCenter{
