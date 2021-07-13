@@ -8,7 +8,8 @@
 body{
     font-family: "Raleway", "calibri";
     width: 100vw;
-    height: 1000px;
+    height: 100%;
+    
 }
 /* =============================================================================
 | First Grid that englobes Header and article
@@ -265,6 +266,7 @@ body{
             #article2Section1Image{
                 background-image: url(./images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg);
             }
+
         #article2section2{
             grid-area: article2section2;
         }
@@ -316,37 +318,65 @@ body{
         | #article3
         ===================================================================== */
         #article3{
+            width: 100%;
+            gap: 20px;
             grid-area: article3;
             display: grid;
             grid-template-columns: repeat(4,1fr);
-            grid-template-rows: repeat(6, 1fr);
+            grid-template-rows: 10% 25% 25% 25%;
             grid-template-areas: 
                 "article3Titre article3Titre article3Titre article3Titre"
                 "article3section1 article3section2 article3section4 article3section5"
-                "article3section1 article3section2 article3section4 article3section5"
                 "article3section1 article3section2 article3section4 article3section6"
-                "article3section1 article3section3 article3section4 article3section6"
                 "article3section1 article3section3 article3section4 article3section6";
         }
             #article3section1{
                 grid-area: article3section1;
+                
+                
             }
+            #imageArticle3Section1{
+                background-image: url(./images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg); 
+            }
+
             #article3section2{
                 grid-area: article3section2;
+            }
+            #imageArticle3Section2{
+                background-image: url(./images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg); 
             }
             #article3section3{
                 grid-area: article3section3;
             }
+            #imageArticle3Section3{
+                background-image: url(./images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg); 
+            }
             #article3section4{
                 grid-area: article3section4;
+            }
+            #imageArticle3Section4{
+                background-image: url(./images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg); 
             }
             #article3section5{
                 grid-area: article3section5;
             }
+            #imageArticle3Section5{
+                background-image: url(./images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg); 
+            }
             #article3section6{
                 grid-area: article3section6;
             }
-
+            #imageArticle3Section6{
+                background-image: url(./images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg); 
+            }
+            .allImagesArticle3{
+                height: 80%;
+                width: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                border-radius: 15px 15px 0 0;
+            }
         /* =================================================================
         | All articles relates
         ================================================================= */
