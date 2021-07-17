@@ -337,7 +337,7 @@ a{
         }
             #article3Section1BigImg{
                 width: 100%;
-                height: 85%;
+                height: 88%;
                 background-image: url(./images/images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
                 background-size: cover;
                 background-position: center;
@@ -345,7 +345,7 @@ a{
             }
             #article3Section1BigText{
                 width: 100%;
-                height: 15%;
+                height: 12%;
             }
             #article3Section1BigText h3{
             padding-left: 10px;
@@ -417,12 +417,12 @@ a{
                 background-size: cover;
                 background-position: center;
                 width: 100%;
-                height: 85%;
+                height: 88%;
                 border-radius: 15px 15px 0 0;
                 }
             #article3Section3BigText{
                 width: 100%;
-                height: 15%;
+                height: 12%;
             }
             #article3Section3BigText h3{
                 width: 100%;
@@ -735,10 +735,6 @@ a{
             align-items: center;
             gap: 5%;
         }
-
-        /* =====================================================================
-        | 
-        ===================================================================== */
             #article2TitleActivites{
                 width: 100%;
                 display: flex;
@@ -828,7 +824,7 @@ a{
         }
             #article3Section1BigImg{
                 width: 100%;
-                height: 85%;
+                height: 88%;
                 background-image: url(./images/images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
                 background-size: cover;
                 background-position: center;
@@ -836,7 +832,7 @@ a{
             }
             #article3Section1BigText{
                 width: 100%;
-                height: 15%;
+                height: 12%;
             }
             #article3Section1BigText h3{
             padding-left: 10px;
@@ -910,12 +906,12 @@ a{
                 background-size: cover;
                 background-position: center;
                 width: 100%;
-                height: 85%;
+                height: 88%;
                 border-radius: 15px 15px 0 0;
                 }
             #article3Section3BigText{
                 width: 100%;
-                height: 15%;
+                height: 12%;
             }
             #article3Section3BigText h3{
                 padding-left: 10px;
