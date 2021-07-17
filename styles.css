@@ -15,9 +15,7 @@ body{
     font-family: "Raleway","calibri","arial";
     width: 95%;
     margin: auto;
-   
 }
-
 i{
     color: #0065FC;
 }
@@ -33,7 +31,6 @@ a{
 #body_page{
   width: 90%;
   margin: auto;  
-    
 }
 
 /* =============================================================================
@@ -252,7 +249,8 @@ a{
                 width: 100%;
                 display: flex;
                 justify-content:space-between;
-                font-size: x-large;
+                align-items: center;
+                margin-top:15px;
             }
             #article2 section{
                 display: flex;
@@ -405,6 +403,7 @@ a{
                     height : 20%;
                     padding-left: 10px;
                 }
+
         /* Section 3 =========================================================*/
 
         #article3Section3{
@@ -493,8 +492,9 @@ a{
         display: flex;
         flex-direction: row;
         gap: 10%;
+        margin: auto;
         justify-content: space-around;
-        padding-left:5%;
+        padding-left:5%; /* Retirer en big screen */
         background-color: #F2F2F2;
     } 
     
@@ -735,16 +735,19 @@ a{
             align-items: center;
             gap: 5%;
         }
+
+        /* =====================================================================
+        | 
+        ===================================================================== */
             #article2TitleActivites{
                 width: 100%;
                 display: flex;
                 justify-content:center;
-                font-size: x-large;
+                align-items: center;
             }
-                #article2TitleActivites p{
-                    margin-right: 10px;
+                #article2TitleActivites h1{
+                    margin-right: 15px;
                 }
-
             #article2 section{
                 display: flex;
                 flex-wrap: wrap;
@@ -752,7 +755,6 @@ a{
                 margin: 0%;
                 background-color: white;
                 border-radius: 15px 15px 15px 15px;
-                
             }
             #article2 section a{
                 display: flex;
@@ -772,7 +774,6 @@ a{
                     height: 100%;
                     width: 50%;
                 }
-                
                 #eau{
                     background-image: url(./images/images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg);
                     background-size: cover;
@@ -895,6 +896,7 @@ a{
                 #article3Section2Sub2SmallText h3{
                     padding-left: 10px;
                 }
+
         /* Section 3 =========================================================*/
 
         #article3Section3{
@@ -977,7 +979,6 @@ a{
                     padding-left: 10px;
                 }
 
-
     /* ============================================================================
     | 
     |                   FOOTER
@@ -990,7 +991,6 @@ a{
         flex-direction: row;
         gap: 10%;
         justify-content: space-evenly;
-        padding-left:5%;
         background-color: #F2F2F2;
     } 
     footer h1{
@@ -1071,7 +1071,6 @@ a{
                 justify-content: flex-end;
                 margin-right: 4%;
                 font-family: "RalewayBold" ;
-                
             }
 
         /* =========================================================================
@@ -1263,10 +1262,15 @@ a{
         }
             #article2TitleActivites{
                 display: flex;
-                justify-content: space-between;
                 width: 100%;
-                font-size: x-large;
+                justify-content: space-between;
             }
+
+            #article2TitleActivites h1{
+                align-self: center;
+            }
+
+
             #article2 section{
                 display: flex;
                 flex-wrap: wrap;
@@ -1378,6 +1382,7 @@ a{
             }
 
         /* Section 2 =========================================================*/
+
         #article3Section2{
             grid-area: article3Section2;
             display: flex;
@@ -1681,3 +1686,27 @@ a{
     margin-top: 5%;
 }
 
+/* =============================================================================
+| effets
+============================================================================= */
+.effect{
+    transition-property: background-color, color;
+    transition-duration: 1s;
+    transition-delay: 0.4s;
+}
+#economique:hover{
+    background: #0065FC;
+    color:white;
+}
+#familial:hover{
+    background: #0065FC;
+    color:white;
+}
+#romantique:hover{
+    background: #0065FC;
+    color:white;
+}
+#animaux:hover{
+    background: #0065FC;
+    color:white;
+}
