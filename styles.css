@@ -23,6 +23,10 @@ a{
     text-decoration: none;
     color: black;
 }
+#logo img{
+    height: 45px;
+    width: 97px;
+}
 
 /* =============================================================================
 | BODY_PAGE
